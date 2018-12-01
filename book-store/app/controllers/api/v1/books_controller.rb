@@ -49,7 +49,7 @@ module V1
 
     # Only allow a trusted parameter "white list" through.
     def book_params
-      params.require(:book).permit(:title, :info, :autor)
+      params.require(:book).permit(:title, :info, :authors_id)
     end
 end
 end

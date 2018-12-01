@@ -1,4 +1,7 @@
-class AuthorsController < ApplicationController
+module API 
+
+module V1
+class API::V1::AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :update, :destroy]
 
   # GET /authors
@@ -48,4 +51,6 @@ class AuthorsController < ApplicationController
     def author_params
       params.require(:author).permit(:name, :surname, :books_id)
     end
+end
+end
 end

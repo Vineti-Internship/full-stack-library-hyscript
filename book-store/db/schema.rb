@@ -50,9 +50,10 @@ ActiveRecord::Schema.define(version: 2018_11_30_114401) do
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "info"
-    t.string "autor"
+    t.integer "authors_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["authors_id"], name: "index_books_on_authors_id"
   end
 
 end
